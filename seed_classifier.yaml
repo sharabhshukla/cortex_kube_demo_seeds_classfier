@@ -1,0 +1,11 @@
+- name: seeds-classifier
+  kind: RealtimeAPI
+  predictor:
+    type: python
+    path: predictor.py
+  compute:
+    cpu: 100m
+    mem: 0.75Gi
+  autoscaling:
+    min_replicas: 1
+    max_replicas: 10
